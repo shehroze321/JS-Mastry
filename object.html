@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <h1>object</h1>
+    <script>
+
+        //  here we create object by using object literal e.g in {}
+        let animal= {
+            name:"cat",
+            color:"black",
+            eat(){
+                console.log(`${this.name} is eating`);
+            }
+        }
+        animal.eat()
+        animal["name"];
+        console.log(animal.color)
+        console.log(animal["name"])
+
+
+        //  here we creaate object by using new keyword 
+
+        let dog = new Object();
+
+        dog.name="hany",
+        dog["color"]="black",
+        dog.eat= function(){
+            console.log(`${this.name} is eating `)
+        }
+
+
+        dog.eat();
+        console.log(dog.name);
+
+    </script>
+</body>
+</html>

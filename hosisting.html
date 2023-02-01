@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+<body>
+    <h1>js hoisting</h1>
+    <script>
+        var favFood= "grapes";
+// var
+        var foodFruit= function(){
+            console.log("first choice :" + favFood) ;
+            // context is againg declearde
+
+         var   favFood="banana";
+
+            console.log("second choice: " +favFood )
+        }
+        foodFruit();
+
+
+        //  we can stop hoisting hoisting by using let and const keyword such as 
+
+        let myfruits= "grapes";
+// var
+        let foodFruits= function(){
+            console.log("first choice :" + myfruits) ;
+            // context is againg declearde
+
+          let  myfruits="banana";
+
+            console.log("second choice: " +myfruits )
+        }
+        foodFruits();
+
+
+
+
+
+        //  let key word have block level scope
+
+        let weather= "sunny";
+
+        function changeWeather(){
+            let weather= "rainy";
+            console.log("Change weather is :" + weather);
+
+        }
+
+       changeWeather();
+       
+       console.log("Original weather is :" + weather)
+
+    //  var have global scope
+    for(var n=0; n<5; n++){
+        console.log(n)
+    }
+    console.log(n)
+
+    //  let have block scope
+    for(let n=0; n<5; n++){
+        console.log(n)
+    }
+    console.log(n)
+
+    </script>
+</body>
+</html>
